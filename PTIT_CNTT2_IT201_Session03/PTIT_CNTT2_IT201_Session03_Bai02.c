@@ -14,10 +14,7 @@ int main() {
         }
     }
     int *arr=(int*)malloc(n*sizeof(int));
-    if (arr==NULL) {
-        printf("khong cap paht duoc bo nho\n");
-        return 1;
-    }
+
     for (int i=0; i<n; i++) {
         printf("So thu %d = ", i+1);
         scanf("%d", &arr[i]);
