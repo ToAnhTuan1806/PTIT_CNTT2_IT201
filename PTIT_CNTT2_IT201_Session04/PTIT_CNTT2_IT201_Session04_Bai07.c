@@ -16,7 +16,9 @@ int main() {
     printf("\n");
 
     int check=0;
+    //duyet nua dau mang de ss voi nua sau
     for (int i=0; i<n/2; i++) {
+        // so sanh ptu dau vs ptu doi xung phia cuoi
         if (arr[i]==arr[n-i-1]) {
             printf("Cap doi xung: (%d, %d)\n", arr[i], arr[n-i-1]);
             check=1;

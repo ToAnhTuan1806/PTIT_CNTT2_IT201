@@ -19,11 +19,11 @@ int main() {
     printf("Nhap gia tri bat ky: ");
     scanf("%d", &value);
 
-    int check=0;
+    int check=0; // bien co de ktra co thay khong
     for (int i=0; i<n; i++) {
         if (arr[i]==value) {
             printf("%d, ", i);
-            check=1;
+            check=1;// danh dau tim thay
         }
     }
     if (check==0) {
