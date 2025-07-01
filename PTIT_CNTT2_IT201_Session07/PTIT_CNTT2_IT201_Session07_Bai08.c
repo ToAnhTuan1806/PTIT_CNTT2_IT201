@@ -1,5 +1,22 @@
 #include <stdio.h>
 
+void swap(int arr[][1000], int row1, int row2, int cols) {
+    for (int i=0; i<cols;i++) {
+        int temp=arr[row1][i];
+        arr[row1][i]=arr[row2][i];
+        arr[row2][i]=temp;
+    }
+}
+void sort(int arr[][1000], int rows, int cols, int k) {
+    for (int i=0; i<rows-1; i++) {
+        for (int j=0; j<rows-i-1;j++) {
+            if (arr[j][k]>arr[j+1][k]) {
+                swap(arr, j, j+1, cols);
+            }
+        }
+    }
+}
+
 int main() {
     int rows, cols;
     do {
@@ -24,19 +41,7 @@ int main() {
         scanf("%d", &k);
     }while (k<0 || k>=cols);
 
-
-    for (int i = 0; i < rows - 1; i++) {
-        for (int j = 0; j < rows - i - 1; j++) {
-            if (arr[j][k] > arr[j + 1][k]) {
-
-                for (int col = 0; col < cols; col++) {
-                    int temp = arr[j][col];
-                    arr[j][col] = arr[j + 1][col];
-                    arr[j + 1][col] = temp;
-                }
-            }
-        }
-    }
+    sort(arr, rows, cols, k);
 
     for (int i=0; i<rows; i++) {
         for (int j=0; j<cols; j++) {
@@ -47,3 +52,4 @@ int main() {
 
     return 0;
 }
+
