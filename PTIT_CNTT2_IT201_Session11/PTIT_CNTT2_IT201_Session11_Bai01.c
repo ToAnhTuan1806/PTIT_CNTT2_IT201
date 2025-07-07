@@ -25,22 +25,6 @@ void printList(Node*head) {
     printf("NULL\n");
 }
 
-Node*reverseList(Node*head) {
-    Node*current=head;
-    Node*temp=head;
-
-    while (current!=NULL) {
-        temp=current->prev;
-        current->prev=current->next;
-        current->next=temp;
-        current=current->prev;
-    }
-    if (temp!=NULL) {
-        head=temp->prev;
-    }
-    return head;
-}
-
 int main () {
     Node*first=creatNode(1);
     Node*second=creatNode(2);
@@ -59,8 +43,6 @@ int main () {
 
     fourth->next=fifth;
     fifth->prev=fourth;
-    printList(first);
-    first=reverseList(first);
     printList(first);
 
     return 0;
