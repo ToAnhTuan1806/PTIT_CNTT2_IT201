@@ -46,7 +46,7 @@ int validate(char expr[]) {
                 return 0;
             }
             char top=pop(&s);
-            if ((c==')' && top!='(' || c==']'&& top!='[' || c=='}'&& top=='{')) {
+            if ((c==')' && top!='(' || c==']'&& top!='[' || c=='}'&& top!='{')) {
                 return 0;
             }
         }
