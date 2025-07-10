@@ -57,15 +57,7 @@ int main() {
     }
     printStack(s);
 
-    int x;
-    printf("Nhap so ng duong bat ky: ");
-    scanf("%d",&x);
 
-    if (x>0) {
-        push(&s,x);
-    }else {
-        printf("khong hop le\n");
-    }
 
     checkStack(s);
 
