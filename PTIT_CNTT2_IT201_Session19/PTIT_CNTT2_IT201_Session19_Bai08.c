@@ -21,7 +21,7 @@ Node*createNode(int value) {
 
 int treeHeight(Node* root) {
     if (root==NULL) {
-        return -1; // node hien tai la NULL thif chieu cao =-1
+        return -1; // node hien tai la NULL thi chieu cao =-1
     }
     int leftHeight = treeHeight(root->left);
     int rightHeight = treeHeight(root->right);
